@@ -1,0 +1,12 @@
+Package: ChessPerformanceAnalyzer
+Title: Chess Performance Analyzer
+Version: 1.0.0
+Authors@R: person("Atharva", "Palve", email = "atharvapalve65@gmail.com", role = c("aut", "cre"))
+Description: An interactive chess performance and rating trend analysis dashboard built with R and Shiny.
+Depends:
+    R (>= 4.0.0)
+Imports:
+    shiny
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.2.3
