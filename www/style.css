@@ -1,0 +1,283 @@
+/* ==========================================================================
+   CHESS PERFORMANCE ANALYZER - CUSTOM STYLESHEET (www/style.css)
+   Theme: Sleek Lichess / Chess.com Inspired Dark Analytics Dashboard
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL RESETS & BODY
+   Sets the deep charcoal canvas (#0F1115) instead of harsh pitch black.
+   -------------------------------------------------------------------------- */
+body {
+  background-color: #0F1115 !important; /* Deep dark background */
+  color: #E5E7EB !important;            /* High-contrast off-white body text */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+/* Headings use the Poppins font family with 0.5px letter-spacing for premium feel */
+h1, h2, h3, h4, .title-text {
+  font-family: 'Poppins', sans-serif !important;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   2. APP HEADER BANNER
+   Top banner with subtle vertical gradient and soft bottom shadow.
+   -------------------------------------------------------------------------- */
+.app-header {
+  background: linear-gradient(135deg, #16191E 0%, #1A1D23 100%);
+  border-bottom: 1px solid #2A2E37;
+  padding: 24px 30px;
+  margin-bottom: 24px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-subtitle {
+  color: #9CA3AF; /* Muted secondary text */
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. SIDEBAR FORM PANEL
+   Visually distinct container (#16191E) with rounded borders and deep shadow.
+   -------------------------------------------------------------------------- */
+.sidebar-panel {
+  background-color: #16191E !important;
+  border: 1px solid #262A33 !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  border-bottom: 1px solid #262A33;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+
+/* Labels above inputs */
+label {
+  color: #9CA3AF !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Input Fields (Text, Select, Numeric, Date) */
+.form-control, .selectize-input {
+  background-color: #0F1115 !important;
+  border: 1px solid #333842 !important;
+  color: #E5E7EB !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+}
+
+/* Focus glow using primary chess green */
+.form-control:focus, .selectize-input.focus {
+  border-color: #2E7D32 !important;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.25) !important;
+  outline: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. PRIMARY BUTTON (Add Game)
+   Solid emerald green button with gradient, smooth translateY hover lift.
+   -------------------------------------------------------------------------- */
+.btn-add-game {
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+  padding: 12px 20px !important;
+  width: 100% !important;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.35) !important;
+  cursor: pointer;
+}
+
+.btn-add-game:hover {
+  background: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.5) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. NAVIGATION TABS (tabsetPanel)
+   Minimal border-bottom active indicator, avoiding default gray bootstrap tabs.
+   -------------------------------------------------------------------------- */
+.nav-tabs {
+  border-bottom: 1px solid #2A2E37 !important;
+  margin-bottom: 20px !important;
+}
+
+.nav-tabs > li > a {
+  color: #9CA3AF !important;
+  background-color: transparent !important;
+  border: none !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  padding: 12px 20px !important;
+  border-bottom: 3px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-tabs > li > a:hover {
+  color: #E5E7EB !important;
+  border-bottom: 3px solid #4B5563 !important;
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:focus, 
+.nav-tabs > li.active > a:hover {
+  color: #2ECC71 !important;
+  border-bottom: 3px solid #2ECC71 !important;
+  background-color: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. CONTENT WIDGET CARDS
+   Reusable card container with #1A1D23 background and 12px radius.
+   -------------------------------------------------------------------------- */
+.chess-card {
+  background-color: #1A1D23;
+  border: 1px solid #262A33;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.chess-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   7. STAT CARDS GRID (Insights & Summary Tab)
+   Responsive CSS Grid displaying large bold metric numbers and small badges.
+   -------------------------------------------------------------------------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-box {
+  background: #16191E;
+  border: 1px solid #262A33;
+  border-radius: 12px;
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 4px;
+}
+
+.stat-subtext {
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+/* --------------------------------------------------------------------------
+   8. PILL BADGES (Win, Loss, Draw, Form)
+   Subtle transparent background with matching vibrant border and text.
+   -------------------------------------------------------------------------- */
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge-win   { background: rgba(46, 204, 113, 0.15); color: #2ECC71; border: 1px solid #2ECC71; }
+.badge-loss  { background: rgba(231, 76, 60, 0.15); color: #E74C3C; border: 1px solid #E74C3C; }
+.badge-draw  { background: rgba(156, 163, 175, 0.15); color: #9CA3AF; border: 1px solid #9CA3AF; }
+.badge-gold  { background: rgba(245, 185, 66, 0.15); color: #F5B942; border: 1px solid #F5B942; }
+.badge-green { background: rgba(46, 204, 113, 0.15); color: #2ECC71; border: 1px solid #2ECC71; }
+.badge-red   { background: rgba(231, 76, 60, 0.15); color: #E74C3C; border: 1px solid #E74C3C; }
+.badge-gray  { background: rgba(156, 163, 175, 0.15); color: #9CA3AF; border: 1px solid #9CA3AF; }
+
+/* --------------------------------------------------------------------------
+   9. CUSTOM GAME LOG TABLE
+   Dark table with zebra striping and subtle hover effects.
+   -------------------------------------------------------------------------- */
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #E5E7EB;
+  font-size: 14px;
+}
+
+.custom-table th {
+  background-color: #16191E;
+  color: #9CA3AF;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 12px 16px;
+  border-bottom: 2px solid #262A33;
+  text-align: left;
+}
+
+.custom-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #262A33;
+}
+
+/* Zebra striping for even rows */
+.custom-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Interactive row hover effect */
+.custom-table tbody tr:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+}
